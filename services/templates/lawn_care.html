@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Lawn Care in Austin | Pug Services{% endblock %}
+{% block description %}Professional lawn mowing, edging, and yard cleanup in Austin. Fast, affordable service. Call/Text 512-827-7624 today!{% endblock %}
+{% block keywords %}Austin lawn care, Austin mowing service, Austin yard cleanup, affordable lawn care Austin{% endblock %}
+{% block content %}
+<!-- Hero -->
+<section class="relative bg-cover bg-center" style="background-image: url({% static 'images/lawn-hero.jpg' %}); height: 750px;">
+  <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center text-white px-4">
+    <h1 class="text-4xl md:text-5xl font-bold">Lawn Care in Austin</h1>
+    <p class="mt-4 text-lg md:text-xl">Affordable mowing, edging, trimming, and yard cleanup. Same-week service available.</p>
+    <div class="mt-6 space-x-4">
+      <a href="tel:+15128277624" class="bg-green-600 px-6 py-3 rounded-md text-white font-semibold hover:bg-green-700">📞 Call Now</a>
+      <a href="sms:+15128277624" class="bg-white text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-200">💬 Text Us</a>
+    </div>
+  </div>
+</section>
+<!-- Services List -->
+<section class="py-12 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-6 text-center">Our Lawn Care Services</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+      <li class="p-4 bg-white rounded-lg shadow">🌱 Lawn mowing & edging</li>
+      <li class="p-4 bg-white rounded-lg shadow">🍂 Leaf blowing & cleanup</li>
+      <li class="p-4 bg-white rounded-lg shadow">🌳 Hedge & bush trimming</li>
+      <li class="p-4 bg-white rounded-lg shadow">🪴 Seasonal yard cleanups</li>
+    </ul>
+<!-- CTA -->
+<section class="py-16 bg-green-600 text-white text-center">
+  <h2 class="text-3xl font-bold">Ready to Schedule Lawn Care?</h2>
+  <p class="mt-4">Call or text us today for a free quote. Serving Austin, TX.</p>
+  <div class="mt-6 space-x-4">
+    <a href="tel:+15128277624" class="bg-white text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-200">📞 Call Now</a>
+    <a href="sms:+15128277624" class="bg-green-800 px-6 py-3 rounded-md font-semibold hover:bg-green-900">💬 Text Us</a>
+{% endblock %}

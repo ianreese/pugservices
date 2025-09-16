@@ -1,10 +1,20 @@
 from django.shortcuts import render
 
-from django.urls import path
-from . import views
+def home(request):
+    return render(request, "index.html")
 
-def junk_hauling(request):
-    return render(request, "services/junk_hauling.html")
+def lawn(request):
+    return render(request, "lawn_care.html")
 
-def pressure_washing(request):
-    return render(request, "services/pressure_washing.html")
+def cleaning(request):
+    return render(request, "house_cleaning.html")
+
+def carpet(request):
+    return render(request, "carpet_cleaning.html")
+
+def junk(request):
+    return render(request, "junk_removal.html")
+
+def pressure(request):
+    return render(request, "pressure_washing.html")
+

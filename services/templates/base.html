@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Pug Services | Local Austin Services{% endblock %}</title>
+  <meta name="description" content="{% block description %}Affordable local services in Austin: Lawn Care, House Cleaning, Carpet Cleaning, Junk Removal, Pressure Washing. Call or text 512-827-7624 today.{% endblock %}">
+  <meta name="keywords" content="{% block keywords %}Austin lawn care, Austin carpet cleaning, Austin junk removal, Austin pressure washing, Austin house cleaning, affordable services Austin{% endblock %}">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Global Nav -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-green-600">Pug Services</a>
+      <div class="space-x-4">
+        <a href="/lawn/" class="hover:text-green-600">Lawn Care</a>
+        <a href="/cleaning/" class="hover:text-green-600">House Cleaning</a>
+        <a href="/carpet/" class="hover:text-green-600">Carpet Cleaning</a>
+        <a href="/junk/" class="hover:text-green-600">Junk Removal</a>
+        <a href="/pressure/" class="hover:text-green-600">Pressure Washing</a>
+      </div>
+    </div>
+  </nav>
+  {% block content %}{% endblock %}
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-6 mt-10">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p>&copy; 2025 Pug Services. All Rights Reserved. Serving Austin, TX.</p>
+      <p><a href="tel:+15128277624" class="text-green-400 hover:underline">📞 Call (512) 827-7624</a></p>
+  </footer>
+  <!-- Floating Call Button -->
+  <a href="tel:+15128277624" class="fixed bottom-4 right-4 bg-red-600 text-black px-4 py-3 rounded-full shadow-lg hover:bg-green-700">
+    📞 Call Now
+  </a>
+</body>
+</html>

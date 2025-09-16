@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Pug Services | Lawn Care, Cleaning & More in Austin{% endblock %}
+{% block description %}Affordable lawn care, house cleaning, carpet cleaning, junk removal & pressure washing in Austin. Same-day service. Call/Text 512-827-7624.{% endblock %}
+{% block keywords %}Austin services, Austin lawn care, Austin house cleaning, Austin junk removal, Austin carpet cleaning, Austin pressure washing{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center" style="background-image: url({% static 'images/pug.jpg' %}); height: 750px;">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center text-white px-4">
+    <h1 class="text-4xl md:text-5xl font-bold">Affordable Local Services in Austin</h1>
+    <p class="mt-4 text-lg md:text-xl">Lawn Care • House Cleaning • Carpet Cleaning • Junk Removal • Pressure Washing</p>
+    <div class="mt-6 space-x-4">
+      <a href="tel:+15128277624" class="bg-green-600 px-6 py-3 rounded-md text-white font-semibold hover:bg-green-700">📞 Call Now</a>
+      <a href="sms:+15128277624" class="bg-white text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-200">💬 Text Us</a>
+    </div>
+  </div>
+</section>
+<!-- Services Grid -->
+<section class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service Card -->
+      <a href="/lawn/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
+        <img src="{% static 'images/lawn.jpg' %}" alt="Lawn Care" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Lawn Care</h3>
+          <p class="mt-2 text-gray-600">Mowing, edging, yard cleanup. Same-week service available.</p>
+        </div>
+      </a>
+      <a href="/cleaning/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
+        <img src="{% static 'images/cleaning.jpg' %}" alt="House Cleaning" class="w-full h-48 object-cover">
+          <h3 class="text-xl font-bold">House Cleaning</h3>
+          <p class="mt-2 text-gray-600">Reliable and affordable cleaning. One-time or recurring.</p>
+      <a href="/carpet/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
+        <img src="{% static 'images/carpet.jpg' %}" alt="Carpet Cleaning" class="w-full h-48 object-cover">
+          <h3 class="text-xl font-bold">Carpet Cleaning</h3>
+          <p class="mt-2 text-gray-600">Eco-friendly steam cleaning and stain removal.</p>
+      <a href="/junk/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
+        <img src="{% static 'images/junk.jpg' %}" alt="Junk Removal" class="w-full h-48 object-cover">
+          <h3 class="text-xl font-bold">Junk Removal</h3>
+          <p class="mt-2 text-gray-600">Furniture, appliances, garage cleanouts. Same-day pickup.</p>
+      <a href="/pressure/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
+        <img src="{% static 'images/pressure.jpg' %}" alt="Pressure Washing" class="w-full h-48 object-cover">
+          <h3 class="text-xl font-bold">Pressure Washing</h3>
+          <p class="mt-2 text-gray-600">Driveways, patios, siding, fences. Sparkling results.</p>
+<!-- CTA -->
+<section class="py-16 bg-green-600 text-white text-center">
+  <h2 class="text-3xl font-bold">Ready to Book a Service?</h2>
+  <p class="mt-4">Call or text us today for fast, affordable local service in Austin.</p>
+  <div class="mt-6 space-x-4">
+    <a href="tel:+15128277624" class="bg-white text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-200">📞 Call Now</a>
+    <a href="sms:+15128277624" class="bg-green-800 px-6 py-3 rounded-md font-semibold hover:bg-green-900">💬 Text Us</a>
+{% endblock %}
