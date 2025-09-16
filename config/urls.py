@@ -17,12 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("services.urls")),  # 👈 this includes home, junk, pressure directly
-
-    # Redirects for old paths
+    path("", include("services.urls")),   # 👈 routes requests into your app
+    
+    # Redirects for old paths (optional)
     path("services/junk/", RedirectView.as_view(url="/junk/", permanent=True)),
-    path("services/pressure/", RedirectView.as_view(url="/pressure/", permanent=True))
+    path("services/pressure/", RedirectView.as_view(url="/pressure/", permanent=True)),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

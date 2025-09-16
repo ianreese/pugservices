@@ -26,8 +26,10 @@ SECRET_KEY = 'django-insecure-3v1b%hhwls)rc8_@kcu-797pd)5*$l8+9&v6qmj6!hd0q!7mkj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "pugservices.com", "www.pugservices.com", ".trycloudflare.com","https://www.pugservices.com", "pugservices.onrender.com"]
-
+ALLOWED_HOSTS = os.getenv(
+    "DJANGO_ALLOWED_HOSTS",
+    "127.0.0.1,localhost,pugservices.com,www.pugservices.com,pugservices.onrender.com"
+).split(",")
 
 # Application definition
 
@@ -117,9 +119,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "services" / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
