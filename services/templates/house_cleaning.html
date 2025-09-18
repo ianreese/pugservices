@@ -1,33 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}House Cleaning in Austin | Pug Services{% endblock %}
-{% block description %}Reliable and affordable home cleaning in Austin. One-time, deep clean, or recurring. Call/Text 512-827-7624 today!{% endblock %}
-{% block keywords %}Austin house cleaning, Austin maid service, deep cleaning Austin, affordable cleaning Austin{% endblock %}
+{% block title %}House Cleaning Services in Austin | Pug Services{% endblock %}
+{% block description %}Reliable and affordable house cleaning in Austin, TX. One-time deep cleans or recurring services. Call (512) 827-7624 today.{% endblock %}
+
 {% block content %}
-<section class="relative bg-cover bg-center" style="background-image: url({% static 'images/cleaning-hero.jpg' %}); height: 750px;">
-  <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center text-white px-4">
-    <h1 class="text-4xl md:text-5xl font-bold">House Cleaning in Austin</h1>
-    <p class="mt-4 text-lg md:text-xl">Reliable and affordable cleaning for homes, apartments, and Airbnbs. One-time or recurring.</p>
-    <div class="mt-6 space-x-4">
-      <a href="tel:+15128277624" class="bg-green-600 px-6 py-3 rounded-md text-white font-semibold hover:bg-green-700">📞 Call Now</a>
-      <a href="sms:+15128277624" class="bg-white text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-200">💬 Text Us</a>
-    </div>
+<section class="relative bg-cover bg-center" style="background-image: url('{% static 'services/images/cleaning-hero.jpg' %}'); height: 500px;">
+  <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center text-white px-4">
+    <h1 class="text-4xl md:text-5xl font-bold">Austin House Cleaning Services</h1>
   </div>
 </section>
-<section class="py-12 bg-gray-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-6 text-center">Our House Cleaning Services</h2>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
-      <li class="p-4 bg-white rounded-lg shadow">🧹 Standard cleaning</li>
-      <li class="p-4 bg-white rounded-lg shadow">✨ Deep cleaning</li>
-      <li class="p-4 bg-white rounded-lg shadow">🏡 Move-in / Move-out cleaning</li>
-      <li class="p-4 bg-white rounded-lg shadow">🛏 Airbnb / rental cleanups</li>
-    </ul>
-<section class="py-16 bg-green-600 text-white text-center">
-  <h2 class="text-3xl font-bold">Book House Cleaning Today</h2>
-  <p class="mt-4">Fast, affordable, and trustworthy. Serving Austin, TX.</p>
-  <div class="mt-6 space-x-4">
-    <a href="tel:+15128277624" class="bg-white text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-200">📞 Call Now</a>
-    <a href="sms:+15128277624" class="bg-green-800 px-6 py-3 rounded-md font-semibold hover:bg-green-900">💬 Text Us</a>
+
+<section class="py-12 max-w-4xl mx-auto px-4">
+  <h2 class="text-2xl font-bold mb-4">Affordable Cleaning for Austin Homes</h2>
+  <p class="mb-6 text-gray-700">Our team provides reliable and affordable cleaning solutions tailored to your needs. Choose one-time deep cleaning or recurring services.</p>
+  <ul class="list-disc list-inside text-gray-700 mb-6">
+    <li>Full home cleaning services</li>
+    <li>Eco-friendly products available</li>
+    <li>One-time or scheduled recurring cleans</li>
+    <li>Kitchen, bathrooms, bedrooms, and more</li>
+  </ul>
+  <div class="text-center">
+    <a href="tel:+15128277624" class="bg-green-600 px-6 py-3 rounded-md text-white font-semibold hover:bg-green-700">📞 Call for House Cleaning</a>
+    <a href="sms:+15128277624" class="ml-4 bg-white text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-200">💬 Text Us</a>
+  </div>
+</section>
 {% endblock %}
+

@@ -1,117 +1,54 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
   background: #f9f9f9;
-  line-height: 1.6;
+  color: #222;
 }
 
-h1, h2 { margin: 0 0 16px; }
-p { margin: 0 0 16px; }
-
-/* Hero Section with overlay */
-.hero {
-  position: relative;
-  background-size: cover;
-  background-position: center;
+header {
+  background: #222;
   color: white;
+  padding: 20px;
   text-align: center;
-  padding: 100px 20px;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-.hero h1, .hero p, .hero a {
-  position: relative;
-  z-index: 1;
 }
 
-/* Sections */
-.section { max-width: 960px; margin: 40px auto; padding: 0 20px; }
-.alt-section { background: #f0f4f9; padding: 40px 20px; }
+h1, h2 {
+  margin: 0;
+}
 
-/* Buttons */
-.cta {
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+a.btn {
   display: inline-block;
-  margin: 10px 6px;
-  background: #2a4d8f;
-  color: white;
   padding: 12px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-.cta:hover { background: #1c3565; transform: scale(1.05); }
-
-/* Sticky Button */
-.sticky-cta {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #2a4d8f;
+  margin: 10px;
+  background: #0077cc;
   color: white;
-  padding: 14px 22px;
-  border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+  border-radius: 5px;
+}
+
+a.btn:hover {
+  background: #005fa3;
+}
+.navbar {
+  background: #222;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
   font-weight: bold;
 }
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .hero {
-    padding: 60px 15px;   /* reduce vertical space on small screens */
-  }
-  .hero h1 {
-    font-size: 32px;      /* smaller headline */
-  }
-  .hero p {
-    font-size: 16px;      /* smaller subtext */
-  }
-  .cta {
-    display: block;       /* buttons stack */
-    width: 100%;          /* full-width buttons */
-    text-align: center;
-  }
-}
-/* Tablet adjustments */
-@media (max-width: 900px) {
-  .hero {
-    padding: 80px 20px;   /* slightly smaller hero padding */
-  }
-  .hero h1 {
-    font-size: 40px;
-  }
-  .hero p {
-    font-size: 18px;
-  }
-  .section {
-    padding: 30px 20px;   /* reduce spacing a little */
-  }
-  .cta {
-    padding: 14px 18px;   /* slightly smaller buttons */
-  }
-}
 
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  .hero {
-    padding: 60px 15px;
-  }
-  .hero h1 {
-    font-size: 32px;
-  }
-  .hero p {
-    font-size: 16px;
-  }
-  .section {
-    padding: 20px 15px;
-  }
-  .cta {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
+.navbar a:hover {
+  text-decoration: underline;
 }
 

@@ -2,12 +2,14 @@
 {% load static %}
 
 {% block title %}Pug Services | Lawn Care, Cleaning & More in Austin{% endblock %}
-{% block description %}Affordable lawn care, house cleaning, carpet cleaning, junk removal & pressure washing in Austin. Same-day service. Call/Text 512-827-7624.{% endblock %}
+{% block description %}Affordable lawn care, house cleaning, carpet cleaning, junk removal & pressure washing in Austin, TX. Same-day service. Call/Text (512) 827-7624 today.{% endblock %}
 {% block keywords %}Austin services, Austin lawn care, Austin house cleaning, Austin junk removal, Austin carpet cleaning, Austin pressure washing{% endblock %}
+
 {% block content %}
+
 <!-- Hero Section -->
-<section class="relative bg-cover bg-center" style="background-image: url({% static 'images/pug.jpg' %}); height: 750px;">
-    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center text-white px-4">
+<section class="relative bg-cover bg-center" style="background-image: url('{% static 'services/images/pug.jpg' %}'); height: 750px;">
+  <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center text-white px-4">
     <h1 class="text-4xl md:text-5xl font-bold">Affordable Local Services in Austin</h1>
     <p class="mt-4 text-lg md:text-xl">Lawn Care • House Cleaning • Carpet Cleaning • Junk Removal • Pressure Washing</p>
     <div class="mt-6 space-x-4">
@@ -16,40 +18,116 @@
     </div>
   </div>
 </section>
-<!-- Services Grid -->
+
+<!-- Our Services Grid -->
 <section class="py-12 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
+    <h2 class="text-3xl font-bold text-center mb-10">Our Services in Austin</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Service Card -->
+      
+      <!-- Lawn Care -->
       <a href="/lawn/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
-        <img src="{% static 'images/lawn.jpg' %}" alt="Lawn Care" class="w-full h-48 object-cover">
+        <img src="{% static 'services/images/lawn-thumb.jpg' %}" alt="Austin lawn care services - mowing, edging, cleanup" class="w-full h-48 object-cover" loading="lazy">
         <div class="p-4">
-          <h3 class="text-xl font-bold">Lawn Care</h3>
-          <p class="mt-2 text-gray-600">Mowing, edging, yard cleanup. Same-week service available.</p>
+          <h3 class="text-xl font-bold">Austin Lawn Care Services</h3>
+          <p class="mt-2 text-gray-600">Mowing, edging, and yard cleanup with same-week availability.</p>
+          <span class="text-green-600 font-semibold">Learn more →</span>
         </div>
       </a>
+
+      <!-- House Cleaning -->
       <a href="/cleaning/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
-        <img src="{% static 'images/cleaning.jpg' %}" alt="House Cleaning" class="w-full h-48 object-cover">
-          <h3 class="text-xl font-bold">House Cleaning</h3>
-          <p class="mt-2 text-gray-600">Reliable and affordable cleaning. One-time or recurring.</p>
+        <img src="{% static 'services/images/cleaning-thumb.jpg' %}" alt="Austin house cleaning services - reliable home cleaning" class="w-full h-48 object-cover" loading="lazy">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Affordable House Cleaning</h3>
+          <p class="mt-2 text-gray-600">Reliable cleaning solutions. One-time or recurring service options.</p>
+          <span class="text-green-600 font-semibold">Learn more →</span>
+        </div>
+      </a>
+
+      <!-- Carpet Cleaning -->
       <a href="/carpet/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
-        <img src="{% static 'images/carpet.jpg' %}" alt="Carpet Cleaning" class="w-full h-48 object-cover">
-          <h3 class="text-xl font-bold">Carpet Cleaning</h3>
-          <p class="mt-2 text-gray-600">Eco-friendly steam cleaning and stain removal.</p>
+        <img src="{% static 'services/images/carpet-thumb.jpg' %}" alt="Austin carpet cleaning - eco-friendly stain removal" class="w-full h-48 object-cover" loading="lazy">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Carpet Cleaning in Austin</h3>
+          <p class="mt-2 text-gray-600">Eco-friendly steam cleaning to remove stains and odors.</p>
+          <span class="text-green-600 font-semibold">Learn more →</span>
+        </div>
+      </a>
+
+      <!-- Junk Removal -->
       <a href="/junk/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
-        <img src="{% static 'images/junk.jpg' %}" alt="Junk Removal" class="w-full h-48 object-cover">
-          <h3 class="text-xl font-bold">Junk Removal</h3>
+        <img src="{% static 'services/images/junk-thumb.jpg' %}" alt="Austin junk removal services - furniture and debris pickup" class="w-full h-48 object-cover" loading="lazy">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Junk Removal in Austin</h3>
           <p class="mt-2 text-gray-600">Furniture, appliances, garage cleanouts. Same-day pickup.</p>
+          <span class="text-green-600 font-semibold">Learn more →</span>
+        </div>
+      </a>
+
+      <!-- Pressure Washing -->
       <a href="/pressure/" class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden">
-        <img src="{% static 'images/pressure.jpg' %}" alt="Pressure Washing" class="w-full h-48 object-cover">
-          <h3 class="text-xl font-bold">Pressure Washing</h3>
-          <p class="mt-2 text-gray-600">Driveways, patios, siding, fences. Sparkling results.</p>
+        <img src="{% static 'services/images/pressure-thumb.jpg' %}" alt="Austin pressure washing - driveways, patios, siding" class="w-full h-48 object-cover" loading="lazy">
+        <div class="p-4">
+          <h3 class="text-xl font-bold">Pressure Washing Services</h3>
+          <p class="mt-2 text-gray-600">Driveways, patios, siding, and fences washed to perfection.</p>
+          <span class="text-green-600 font-semibold">Learn more →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="py-16 bg-green-600 text-white text-center">
   <h2 class="text-3xl font-bold">Ready to Book a Service?</h2>
-  <p class="mt-4">Call or text us today for fast, affordable local service in Austin.</p>
+  <p class="mt-4">Call us today at <a href="tel:+15128277624" class="underline">(512) 827-7624</a> or text for fast, affordable local service in Austin.</p>
   <div class="mt-6 space-x-4">
     <a href="tel:+15128277624" class="bg-white text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-200">📞 Call Now</a>
     <a href="sms:+15128277624" class="bg-green-800 px-6 py-3 rounded-md font-semibold hover:bg-green-900">💬 Text Us</a>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-12 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+    <div>
+      <h3 class="font-semibold">Do you offer same-day lawn care in Austin?</h3>
+      <p class="text-gray-600 mb-4">Yes, we provide same-day mowing, edging, and cleanup depending on availability.</p>
+      
+      <h3 class="font-semibold">What areas around Austin do you serve?</h3>
+      <p class="text-gray-600 mb-4">We serve Austin and surrounding areas including Round Rock, Cedar Park, Pflugerville, and Kyle.</p>
+      
+      <h3 class="font-semibold">Are your cleaning products eco-friendly?</h3>
+      <p class="text-gray-600">Yes, we use safe, eco-friendly products for carpet and house cleaning services.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Local Business Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pug Services",
+  "image": "{% static 'services/images/pug.jpg' %}",
+  "telephone": "+15128277624",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Austin",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "url": "https://pugservices.onrender.com",
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "City",
+    "name": "Austin"
+  }
+}
+</script>
+
 {% endblock %}
+
